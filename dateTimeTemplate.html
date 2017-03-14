@@ -1,0 +1,19 @@
+<div>
+  <input class="form-control"
+        placeholder="Date & time..."
+        ng-model="vm.asMoment"
+        moment-picker="vm.asString"
+        change="vm.onChange(newValue, oldValue)"
+        locale="en"
+        format="YYYY-MM-DD HH:mm"
+        autoclose="true"
+        today="true"
+        max-view="hour">
+</div>
+
+<div>
+  <label>My date</label>
+  <div>
+    <time title="{{ vm.asMoment | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}">{{ vm.asMoment | amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}</time>
+  </div>
+</div>
